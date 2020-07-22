@@ -1,10 +1,16 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const routes = require("./routes/index");
 
 const app = express();
 
 const port = 3000;
+
+//Ember JS (ejs)template engine
+app.set("view engine", "ejs");
+// tell express where to find views
+app.set("views", path.join(__dirname, "./views"));
 
 // Connect to database
 let mongoDbUrl = "mongodb://localhost/";
@@ -26,12 +32,8 @@ mongoose.connect(
 // Middlewares
 app.use(express.static(path.join(__dirname, "./static")));
 
-// Route for the index page
-app.get("/", (request, response) => {
-  response.sendFile(path.join(__dirname, "./static/index.html"));
-});
+app.use("/", routes());
 
 app.listen(port, () => {
-  console.log("Restarting");
   console.log(`Express server listening on port ${port}!`);
 });
