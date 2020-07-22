@@ -8,7 +8,7 @@ var OrderSchema = new Schema({
   date: { type: Date, default: Date() },
 });
 
-// convert the Pizza, Orders schema into a Model
+// convert the Orders schema into a Model
 let Order = mongoose.model("Order", OrderSchema);
 
 module.exports = Order;
