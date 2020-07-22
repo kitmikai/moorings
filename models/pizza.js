@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 // Create a Pizza schema for our database
 var PizzaSchema = new Schema({
+  id: Number,
   name: String,
   price: Number,
 });
