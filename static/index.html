@@ -44,23 +44,24 @@
     >
       <img
         class="w3-image"
-        src="./images/hamburger.jpg"
-        alt="Hamburger Catering"
+        src="./images/The-Moorings-Restaurant_Interior3-2-2.jpg"
+        alt="Moorings"
         width="1600"
         height="800"
       />
       <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-        <h1 class="w3-xxlarge">The Moorings Floating Restauraunt</h1>
+        <h1 class="w3-xxlarge w3-white">The Moorings Floating Restauraunt</h1>
       </div>
     </header>
 
     <!-- Page content -->
     <div class="w3-content" style="max-width: 1100px;">
+
       <!-- About Section -->
       <div class="w3-row w3-padding-64" id="about">
         <div class="w3-col m6 w3-padding-large w3-hide-small">
           <img
-            src="./images/tablesetting2.jpg"
+            src="./images/The-Moorings-Restaurant-Sundowner_Setup2-2.jpg"
             class="w3-round w3-image w3-opacity-min"
             alt="Table Setting"
             width="600"
@@ -103,20 +104,54 @@
   <div class="w3-row w3-padding-64" id="menu">
     <div class="w3-col l6 w3-padding-large">
       <h1 class="w3-center">Our Menu</h1><br>
-      <h4>Bread Basket</h4>
+
+<div class="w3-container" >
+  <div class="w3-content" style="max-width:700px">
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5>
       <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
     
-      <h4>Honey Almond Granola with Fruits</h4>
+      <h5>Honey Almond Granola with Fruits</h5>
       <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
     
-      <h4>Belgian Waffle</h4>
+      <h5>Belgian Waffle</h5>
       <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
     
-      <h4>Scrambled eggs</h4>
+      <h5>Scrambled eggs</h5>
       <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
     
-      <h4>Blueberry Pancakes</h4>
-      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>    
+      <h5>Blueberry Pancakes</h5>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+    
+  </div>
+</div>
     </div>
     
     <div class="w3-col l6 w3-padding-large">
@@ -126,10 +161,59 @@
 
   <hr>
 
-      <!-- Pizza hub section -->
-      <div class="w3-container w3-padding-64" id="pizza">
-        <h1>Pizza Hub</h1>
-        <br />
+  <!-- pizza hub section -->
+   <div class="w3-row w3-padding-64" id="pizza">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <img
+        src="./images/Pizza.jpg"
+        class="w3-round w3-image w3-opacity-min"
+        alt="Table Setting"
+        width="600"
+        height="750"
+      />
+    </div>
+
+  <div class="w3-col m6 w3-padding-large" >
+    <h1 class="w3-center">Our Pizza Hub</h1><br>
+      <h4>Vegetarian Pizza</h4>
+      <p class="w3-text-grey">Mozzarella, Sweet pepper, zucchini, mushrooms and olives</p>
+    
+      <h4>Pizza Chongolulu</h4>
+      <p class="w3-text-grey">Ham, mushrooms and black olives</p>
+    
+      <h4>Seafood Pizza</h4>
+      <p class="w3-text-grey">Prawns, squid and tuna fish</p>
+    
+      <h4>Pizza Ruspante</h4>
+      <p class="w3-text-grey">Mozzarella and chicken chunks, topped with Rucola</p>
+    
+      <h4>Pizza Marguerita</h4>
+      <p class="w3-text-grey">Mozzarella topping, sprinkled with fresh basil</p>  
+
+      <h4>Pizza Hawaii </h4>
+      <p class="w3-text-grey">Mozzarella, ham and pineapple topping</p>
+      
+      <h4>Salami Pizza</h4>
+      <p class="w3-text-grey">With zucchini on Mozzarella-tomato-sauce base
+      </p> 
+
+      <h4>Spicy Oriental Pizza</h4>
+      <p class="w3-text-grey">With a chilli-mince-meat-sauce and blobs of yoghurt and mint</p> 
+
+      <h4>Pizza Hawaii</h4>
+      <p class="w3-text-grey">Mozzarella, ham and pineapple topping</p> 
+
+      <h4>Pizza Chicago</h4>
+      <p class="w3-text-grey">Spinach, tomato and cheese - and a little chilli
+      </p> 
+
+      <h4>Pizza Alfredo</h4>
+      <p class="w3-text-grey">Oven roast vegetables on Alfredo Sauce
+      </p> 
+  </div>
+</div>
+
+<hr />
 
 
       <!-- Contact Section -->
@@ -202,5 +286,23 @@
         >
       </p>
     </footer>
+    <script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
   </body>
 </html>
