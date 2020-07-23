@@ -4,6 +4,7 @@ const Schema = mongoose.Schema;
 var OrderSchema = new Schema({
   orderId: String,
   itemName: String,
+  quantity: Number,
   total: Number,
   date: { type: Date, default: Date() },
 });
