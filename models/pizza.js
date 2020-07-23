@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 var PizzaSchema = new Schema({
   id: Number,
   name: String,
+  description: String,
   price: Number,
 });
 
