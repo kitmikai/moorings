@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-// Create a Pizza schema for our database
+// Create a Menu schema for our database
 var MenuSchema = new Schema({
   id: Number,
   name: String,
@@ -10,7 +10,7 @@ var MenuSchema = new Schema({
   price: Number,
 });
 
-// convert the Pizza, Orders schema into a Model
-let Menu = mongoose.model("Pizza", MenuSchema);
+// convert the Menu schema into a Model
+let Menu = mongoose.model("Menu", MenuSchema);
 
 module.exports = Menu;
