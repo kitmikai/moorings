@@ -9,7 +9,7 @@ var PizzaSchema = new Schema({
   price: Number,
 });
 
-// convert the Pizza, Orders schema into a Model
+// convert the Pizza schema into a Model
 let Pizza = mongoose.model("Pizza", PizzaSchema);
 
 module.exports = Pizza;
