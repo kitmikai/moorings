@@ -1,39 +1,38 @@
-const express = require("express");
-const path = require("path");
-const mongoose = require("mongoose");
-const routes = require("./routes/index");
+const express = require('express');
+const path = require('path');
+
+const mongoose = require('mongoose');
+
+// Connect to the database
+const mongoDbUrl = 'mongodb://localhost/';
+const dbName = 'moorings';
+mongoose.connect(mongoDbUrl + dbName, { useNewUrlParser: true, useUnifiedTopology: true });
+const database = mongoose.connection;
+
+// Check Connection
+database.once('open', () => {
+  console.log('Database connected successfully');
+});
+
+// Check for DB Errors
+database.on('error', (error) => {
+  console.log(error);
+});
+
+const routes = require('./routes');
 
 const app = express();
 
 const port = 3000;
 
-//Ember JS (ejs)template engine
-app.set("view engine", "ejs");
-// tell express where to find views
-app.set("views", path.join(__dirname, "./views"));
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
 
-// Connect to database
-let mongoDbUrl = "mongodb://localhost/";
-let dbName = "moorings";
-const connString = mongoDbUrl + dbName;
+app.use(express.static(path.join(__dirname, '/static')));
 
-mongoose.connect(
-  connString,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  (err) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log("Database connected successfully");
-    }
-  }
-);
-
-// Middlewares
-app.use(express.static(path.join(__dirname, "./static")));
-
-app.use("/api", routes);
+app.use('/api', routes);
 
 app.listen(port, () => {
-  console.log(`Express server listening on port ${port}!`);
+  console.log(`Express server listening on http://localhost:${port}/api`);
 });
+
