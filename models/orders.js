@@ -1,7 +1,8 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
-var OrderSchema = new Schema({
+const orderschema = new Schema({
   orderId: String,
   itemName: String,
   quantity: Number,
@@ -10,6 +11,7 @@ var OrderSchema = new Schema({
 });
 
 // convert the Orders schema into a Model
-let Order = mongoose.model("Order", OrderSchema);
+const Order = mongoose.model('Order', orderschema);
 
 module.exports = Order;
+

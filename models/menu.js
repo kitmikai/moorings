@@ -1,8 +1,9 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
+
 const Schema = mongoose.Schema;
 
 // Create a Menu schema for our database
-var MenuSchema = new Schema({
+const menuschema = new Schema({
   id: Number,
   name: String,
   category: String,
@@ -11,6 +12,7 @@ var MenuSchema = new Schema({
 });
 
 // convert the Menu schema into a Model
-let Menu = mongoose.model("Menu", MenuSchema);
+const Menu = mongoose.model('Menu', menuschema);
 
 module.exports = Menu;
+
