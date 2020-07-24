@@ -1,34 +1,28 @@
 const express = require("express");
 
+// Routes that are used
 const ordersRoute = require("./orders");
-const menuRoute = require("./menu");
 const feedbackRoute = require("./feedback");
+const pizzaRoute = require("./pizza");
 const Menu = require("../models/menu");
 
 const router = express.Router();
 
-// module.exports = () => {
-// Route for the index page
+// Catch all routes
 router.get("/", (request, response) => {
   Menu.find({}, (error, menu) => {
-    // if (error) {
-    //   console.log(error);
-    // } else {
-    //   response.render("pages/index", {
-    //     pageTitle: "Welcome",
-    //     menu: menu,
-    //     msg: request.query.msg,
-    //   });
-    // }
-    console.log(menu, "Pizza");
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`Menu Items:  ${menu}`);
+      response.render("pages/index", { pageTitle: "Welcome", menuitems: menu });
+    }
   });
 });
 
+// mount the routes
 router.use("/orders", ordersRoute);
-router.use("/menu", menuRoute);
 router.use("/feedback", feedbackRoute);
+router.use("/pizza", pizzaRoute);
 
 module.exports = router;
-
-// return router;
-// };

@@ -1,17 +1,10 @@
-const mongoose = require('mongoose');
+const express = require("express");
 
-const { Schema } = mongoose;
+const router = express.Router();
 
-// Create a Pizza schema for our database
-const PizzaSchema = new Schema({
-  id: Number,
-  name: String,
-  description: String,
-  price: Number,
+// Catch all routes
+router.get("/", (request, response) => {
+  return response.send("Pizza list");
 });
 
-// convert the Pizza schema into a Model
-const Pizza = mongoose.model('Pizza', PizzaSchema);
-
-module.exports = Pizza;
-
+module.exports = router;
