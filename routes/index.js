@@ -18,7 +18,7 @@ router.get("/", (request, response) => {
       response.render("pages/index", {
         pageTitle: "Welcome",
         menuitems: menu,
-        pageLink: "/api/pizza",
+        pageLink: "/pizza",
       });
     }
   });
