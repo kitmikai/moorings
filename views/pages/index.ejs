@@ -149,170 +149,64 @@
 
               <!-- Starters Menu -->
               <div id="Starters" class="w3-container menu w3-padding-48 w3-card">
-                <% menuitems.forEach(function(menuitem){%>
-                  <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
+                <% menuitems.forEach(function(menuitem){ %>
+                  <% if (menuitem.category === "Starters") { %>
+                    <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
                   <p class="w3-text-grey"><%= menuitem.description %></p>
-                
+                  <%}%>
                 <%})%>
-              
-
-                <!-- <h5>Butterfly Prawns</h5><span class="w3-right w3-tag w3-blue w3-round">980.00</span>
-                <p class="w3-text-grey">Deep-fried garlic King prawns, coated in breadcrumbs, served with cocktail sauce</p>
-
-                <h5>Gratinated Oysters</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Baked fresh Oysters, topped with melting cheese</p>
-
-                <h5>Fresh Oysters</h5><span class="w3-right w3-tag w3-blue w3-round">790.00</span>
-                <p class="w3-text-grey">Served on a bed of rock ice</p>
-
-                <h5>Smoked Sailfish</h5><span class="w3-right w3-tag w3-blue w3-round">860.00</span>
-                <p class="w3-text-grey">Home-smoked sail fish with a delicious dill-mustard sauce.</p>
-
-                <h5>Calamari</h5><span class="w3-right w3-tag w3-blue w3-round">860.00</span>
-                <p class="w3-text-grey">Breaded deep-fried Calamari, served with cocktail- or tartar sauce and lemon</p>
-
-                <h5>Cream of Tomato Soup</h5><span class="w3-right w3-tag w3-blue w3-round">320.00</span>
-                <p class="w3-text-grey">Tasty soup of fresh tomatoes served with Bread</p> -->
               </div>
 
               <!-- Pasta Menu -->
               <div id="Pasta" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Homemade Tagliatelle with Fresh Tomato and Cheese</h5><span class="w3-right w3-tag w3-blue w3-round">780.00</span>
-                <p class="w3-text-grey">A fresh plate of Tagliatelle with Olive oil, lots of cheese, tomato and basil</p>
-
-                <h5>Prawns Pasta</h5><span class="w3-right w3-tag w3-blue w3-round">990.00</span>
-                <p class="w3-text-grey">Queen prawns on a plate of homemade tagliatelle in a pungent tomato sauce with fresh basil</p>
-
-                <h5>Penne Tuna with Avocado and Basil</h5><span class="w3-right w3-tag w3-blue w3-round">980.00</span>
-                <p class="w3-text-grey">Al dente penne tossed in herbed olive oil, avocado and tuna, sprinkled with grated lemon rind</p>
-
-                <h5>Spinach-Cheese Ravioli</h5><span class="w3-right w3-tag w3-blue w3-round">850.00</span>
-                <p class="w3-text-grey">Homemade Ravioli with a filling of sautéed spinach, garlic and cheese on either the house tomato sauce or a cream-cheese-mushroom sauce</p>
-
-                <h5>Prawns Pasta with Orange and Pernod</h5><span class="w3-right w3-tag w3-blue w3-round">1,250.00</span>
-                <p class="w3-text-grey">Tagliatelle, homemade, with prawns and surprising pernod twist</p>
-
-                <h5>Spring Vegetable Tagliatelle with Lemon-Cream Sauce</h5><span class="w3-right w3-tag w3-blue w3-round">780.00</span>
-                <p class="w3-text-grey">Mushroom, zucchini and peas, tossed in light cream with garlic, lemon zest and cheese</p>
+                <% menuitems.forEach(function(menuitem){ %>
+                  <% if (menuitem.category === "Pasta") { %>
+                    <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
+                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                  <%}%>
+                <%})%>
               </div>
 
               <!-- Fish Menu -->
               <div id="Fish" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Fish Fillet in Prawns Sauce</h5><span class="w3-right w3-tag w3-blue w3-round">1,590.00</span>
-                <p class="w3-text-grey">Pan-fried fish fillet with a mild mustard and prawn-sauce</p>
-
-                <h5>Parchment Fish Parcel</h5><span class="w3-right w3-tag w3-blue w3-round">1,350.00</span>
-                <p class="w3-text-grey">A juicy fillet of fish, rubbed with mixed herbs and lemon, wrapped in parchment and gently cooked in our clay oven.</p>
-
-                <h5>Fish a'la Muna</h5><span class="w3-right w3-tag w3-blue w3-round">1,350.00</span>
-                <p class="w3-text-grey">Some like it HOT!<br>
-
-                  This fish dish is for them - with a refreshing salsa on the side.</p>
-
-                <h5>Moorings Sea Food Pot</h5><span class="w3-right w3-tag w3-blue w3-round">1,790.00</span>
-                <p class="w3-text-grey">This rustic fish stew contains fish, squid, prawns and crab claw and will bring the sea closer to you.</p>
-
-                <h5>Prawns Curry</h5><span class="w3-right w3-tag w3-blue w3-round">1,750.00</span>
-                <p class="w3-text-grey">Queen prawns cooked in a creamy curry sauce</p>
-
-                <h5>Fish "Kachumbari" </h5><span class="w3-right w3-tag w3-blue w3-round">1,250.00</span>
-                <p class="w3-text-grey">A whole fish cooked on the bone, with refreshing Kachumbari,</p>
+                <% menuitems.forEach(function(menuitem){ %>
+                  <% if (menuitem.category === "Fish") { %>
+                    <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
+                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                  <%}%>
+                <%})%>
               </div>
+              
 
               <!-- Pizza Menu -->
 
-              <div id="Pizza" class="w3-container menu w3-padding-48 w3-card">
-<!--                 
-                <h5></h5><span class="w3-right w3-tag w3-blue w3-round">820</span>
-                <p class="w3-text-grey"></p> -->
-                
-
-                <h5>Pizza Chongolulu</h5><span class="w3-right w3-tag w3-blue w3-round">940.00</span>
-                <p class="w3-text-grey">Ham, mushrooms and black olives</p>
-
-                <h5>Seafood Pizza</h5><span class="w3-right w3-tag w3-blue w3-round">990.00</span>
-                <p class="w3-text-grey">Prawns, squid and tuna fish</p>
-
-                <h5>Pizza Ruspante</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Mozzarella and chicken chunks, topped with Rucola</p>
-
-                <h5>Pizza Marguerita</h5><span class="w3-right w3-tag w3-blue w3-round">740.00</span>
-                <p class="w3-text-grey">Mozzarella topping, sprinkled with fresh basil</p>
-
-                <h5>Pizza Hawaii </h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Mozzarella, ham and pineapple topping</p>
-
-                <h5>Salami Pizza</h5><span class="w3-right w3-tag w3-blue w3-round">940.00</span>
-                <p class="w3-text-grey">With zucchini on Mozzarella-tomato-sauce base
-                </p>
-
-                <h5>Spicy Oriental Pizza</h5><span class="w3-right w3-tag w3-blue w3-round">870.00</span>
-                <p class="w3-text-grey">With a chilli-mince-meat-sauce and blobs of yoghurt and mint</p>
-
-                <h5>Pizza Hawaii</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Mozzarella, ham and pineapple topping</p>
-
-                <h5>Pizza Chicago</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Spinach, tomato and cheese - and a little chilli
-                </p>
-                <h5>Pizza Alfredo</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Oven roast vegetables on Alfredo Sauce
-                </p>
-                <a href="pizzaorder.html" class="w3-bar-item w3-button" target="blank">Make Order</a>
+              <div id="Pizza" class="w3-container menu w3-padding-48 w3-card">                 
+                <% menuitems.forEach(function(menuitem){ %>
+                  <% if (menuitem.category === "Pizza") { %>
+                    <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
+                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                  <%}%>
+                <%})%>
               </div>
 
               <!-- Beef Menu -->
               <div id="Beef" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Steak with Oysters</h5><span class="w3-right w3-tag w3-blue w3-round">1,550.00</span>
-                <p class="w3-text-grey">Fillet Steak topped with Oysters in a butter sauce with a dash of Tabasco and white wine.</p>
-
-                <h5>Mustard Fillet Steak</h5><span class="w3-right w3-tag w3-blue w3-round">1,350.00</span>
-                <p class="w3-text-grey">Fried steak on gentle mustard sauce, served with a salad from fresh Rucola, tomatoes and nuts in vinaigrette</p>
-
-                <h5>Fillet with a Spicy Pepper Sauce</h5><span class="w3-right w3-tag w3-blue w3-round">1,350.00</span>
-                <p class="w3-text-grey">Tender beef steak with a spicy pepper sauce, arranged on a bed of sautéed sweet peppers and onions, served with chips.</p>
-
-                <h5>Sweet and Spicy Steak</h5><span class="w3-right w3-tag w3-blue w3-round">1,350.00</span>
-                <p class="w3-text-grey">Steak flavoured with a spicy sauce prepared with sherry, Balsamic vinegar and a little honey</p>
-
-                <h5>Stuffed Beef Fillet</h5><span class="w3-right w3-tag w3-blue w3-round">1,350.00</span>
-                <p class="w3-text-grey">Fried steak with stuffing of mushrooms, onions, sweet pepper and cheese</p>
-
-                <h5>Fillet Bacon Steak</h5><span class="w3-right w3-tag w3-blue w3-round">1,350.00</span>
-                <p class="w3-text-grey">Beef Steak with a stuffing of cream cheese, mustard and onion, wrapped with bacon</p>
-
-                <h5>Grilled Meat Platter for 4</h5><span class="w3-right w3-tag w3-blue w3-round">5,850.00</span>
-                <p class="w3-text-grey">Juicy beef fillet, chicken wings and beef sausages, served with cocktail sauce, a colourful plate of grilled vegetables, fresh fries and plain rice or ugali
-                </p>
-                <h5>MOORINGS Burger</h5><span class="w3-right w3-tag w3-blue w3-round">780.00</span>
-                <p class="w3-text-grey">An open, generous Beef Burger with lettuce, tomato, cucumber, fried onions and cocktail sauce.</p>
+                <% menuitems.forEach(function(menuitem){ %>
+                  <% if (menuitem.category === "Beef") { %>
+                    <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
+                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                  <%}%>
+                <%})%>
               </div>
 
               <!-- Desserts Menu -->
               <div id="Desserts" class="w3-container menu w3-padding-48 w3-card">
-                <h5>Van Choc Ice Cream</h5><span class="w3-right w3-tag w3-blue w3-round">420.00</span>
-                <p class="w3-text-grey">Vanilla and Chocolate Ice Cream in a crispy ginger tartlet</p>
-
-                <h5>Van Choc Amarulla</h5><span class="w3-right w3-tag w3-blue w3-round">520.00</span>
-                <p class="w3-text-grey">Vanilla and Chocolate Ice Cream in a crispy ginger tartlet Topped with Amarula</p>
-
-                <h5>Van Choc Gold</h5><span class="w3-right w3-tag w3-blue w3-round">520.00</span>
-                <p class="w3-text-grey">Vanilla and Chocolate Ice Cream in a crispy ginger tartlet Topped with Coffee Liquer</p>
-
-                <h5>Banana-Ginger Crunch</h5><span class="w3-right w3-tag w3-blue w3-round">580.00</span>
-                <p class="w3-text-grey">Layers of banana, cream cheese and crunchy ginger brittle</p>
-
-                <h5>Ice Cream on Orange</h5><span class="w3-right w3-tag w3-blue w3-round">550.00</span>
-                <p class="w3-text-grey">Vanilla Ice Cream on orange chunks with a Cointreau-Cream and a surprising basil-chocolate topping</p>
-
-                <h5>Kenya Coffee or Tea</h5><span class="w3-right w3-tag w3-blue w3-round">180.00</span>
-                <p class="w3-text-grey">A pot of fresh Kenya Coffee or Tea with a biscuit on the side</p>
-
-                <h5>Spicy Pineapple</h5><span class="w3-right w3-tag w3-blue w3-round">550.00</span>
-                <p class="w3-text-grey">Pineapple slices braised in a spicy Chilly-Rum-Syrup and Vanilla Ice-cream</p>
-
-                <h5>Double Decker</h5><span class="w3-right w3-tag w3-blue w3-round">390.00</span>
-                <p class="w3-text-grey">Chocolate Ice-cream sandwitched between chocolate-cake-slices with sugar vermicelli</p>
+                <% menuitems.forEach(function(menuitem){ %>
+                  <% if (menuitem.category === "Desserts") { %>
+                    <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
+                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                  <%}%>
+                <%})%>
               </div>
 
             </div>
@@ -334,47 +228,17 @@
 
         <div class="w3-col m6 w3-padding-large">
           <h1 class="w3-center">Our Pizza Hub</h1><br>
-          <h5>Vegetarian Pizza</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Mozzarella, Sweet pepper, zucchini, mushrooms and olives</p>
-
-                <h5>Pizza Chongolulu</h5><span class="w3-right w3-tag w3-blue w3-round">940.00</span>
-                <p class="w3-text-grey">Ham, mushrooms and black olives</p>
-
-                <h5>Seafood Pizza</h5><span class="w3-right w3-tag w3-blue w3-round">990.00</span>
-                <p class="w3-text-grey">Prawns, squid and tuna fish</p>
-
-                <h5>Pizza Ruspante</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Mozzarella and chicken chunks, topped with Rucola</p>
-
-                <h5>Pizza Marguerita</h5><span class="w3-right w3-tag w3-blue w3-round">740.00</span>
-                <p class="w3-text-grey">Mozzarella topping, sprinkled with fresh basil</p>
-
-                <h5>Pizza Hawaii </h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Mozzarella, ham and pineapple topping</p>
-
-                <h5>Salami Pizza</h5><span class="w3-right w3-tag w3-blue w3-round">940.00</span>
-                <p class="w3-text-grey">With zucchini on Mozzarella-tomato-sauce base
-                </p>
-
-                <h5>Spicy Oriental Pizza</h5><span class="w3-right w3-tag w3-blue w3-round">870.00</span>
-                <p class="w3-text-grey">With a chilli-mince-meat-sauce and blobs of yoghurt and mint</p>
-
-                <h5>Pizza Hawaii</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Mozzarella, ham and pineapple topping</p>
-
-                <h5>Pizza Chicago</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Spinach, tomato and cheese - and a little chilli
-                </p>
-                <h5>Pizza Alfredo</h5><span class="w3-right w3-tag w3-blue w3-round">820.00</span>
-                <p class="w3-text-grey">Oven roast vegetables on Alfredo Sauce
-                </p>
-                <a href="<%=pageLink %>" class="w3-bar-item w3-button" target="blank">Make Order</a>
+          <% menuitems.forEach(function(menuitem){ %>
+            <% if (menuitem.category === "Pizza") { %>
+              <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
+            <p class="w3-text-grey"><%= menuitem.description %></p>
+            <%}%>
+          <%})%>
+          <a href="<%=pageLink %>" class="w3-bar-item w3-button" target="blank">Make Order</a>
                 
         </div>
       </div>
-
       <hr />
-
 
       <!-- Contact Section -->
       <div class="w3-container w3-padding-64" id="contact">
@@ -445,6 +309,8 @@
       document.getElementById("myLink").click();
 
     </script>
+
+    <script src="/static/js/order.js"></script>
 
   </body>
 
