@@ -15,7 +15,11 @@ router.get("/", (request, response) => {
       console.log(error);
     } else {
       console.log(`Menu Items:  ${menu}`);
-      response.render("pages/index", { pageTitle: "Welcome", menuitems: menu });
+      response.render("pages/index", {
+        pageTitle: "Welcome",
+        menuitems: menu,
+        pageLink: "/pizza",
+      });
     }
   });
 });

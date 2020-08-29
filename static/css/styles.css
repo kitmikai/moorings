@@ -4,19 +4,24 @@
   width: 100%;
 }
 
-#pizza td, #pizza th {
+#pizza td,
+#pizza th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#pizza tr:nth-child(even){background-color: #f2f2f2;}
+#pizza tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#pizza tr:hover {background-color: #ddd;}
+#pizza tr:hover {
+  background-color: #ddd;
+}
 
 #pizza th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
