@@ -152,7 +152,7 @@
                 <% menuitems.forEach(function(menuitem){ %>
                   <% if (menuitem.category === "Starters") { %>
                     <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
-                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                    <p class="w3-text-grey"><%= menuitem.description %></p>
                   <%}%>
                 <%})%>
               </div>
@@ -162,7 +162,7 @@
                 <% menuitems.forEach(function(menuitem){ %>
                   <% if (menuitem.category === "Pasta") { %>
                     <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
-                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                    <p class="w3-text-grey"><%= menuitem.description %></p>
                   <%}%>
                 <%})%>
               </div>
@@ -172,19 +172,17 @@
                 <% menuitems.forEach(function(menuitem){ %>
                   <% if (menuitem.category === "Fish") { %>
                     <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
-                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                    <p class="w3-text-grey"><%= menuitem.description %></p>
                   <%}%>
                 <%})%>
               </div>
               
-
               <!-- Pizza Menu -->
-
               <div id="Pizza" class="w3-container menu w3-padding-48 w3-card">                 
                 <% menuitems.forEach(function(menuitem){ %>
                   <% if (menuitem.category === "Pizza") { %>
                     <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
-                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                    <p class="w3-text-grey"><%= menuitem.description %></p>
                   <%}%>
                 <%})%>
               </div>
@@ -194,7 +192,7 @@
                 <% menuitems.forEach(function(menuitem){ %>
                   <% if (menuitem.category === "Beef") { %>
                     <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
-                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                    <p class="w3-text-grey"><%= menuitem.description %></p>
                   <%}%>
                 <%})%>
               </div>
@@ -204,7 +202,7 @@
                 <% menuitems.forEach(function(menuitem){ %>
                   <% if (menuitem.category === "Desserts") { %>
                     <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
-                  <p class="w3-text-grey"><%= menuitem.description %></p>
+                    <p class="w3-text-grey"><%= menuitem.description %></p>
                   <%}%>
                 <%})%>
               </div>
@@ -231,12 +229,13 @@
           <% menuitems.forEach(function(menuitem){ %>
             <% if (menuitem.category === "Pizza") { %>
               <h5><%= menuitem.name %></h5><span class="w3-right w3-tag w3-blue w3-round"><%= menuitem.price %></span>
-            <p class="w3-text-grey"><%= menuitem.description %></p>
+              <p class="w3-text-grey"><%= menuitem.description %></p>
             <%}%>
           <%})%>
-          <a href="<%=pageLink %>" class="w3-bar-item w3-button" target="blank">Make Order</a>
+          
                 
         </div>
+        <a href="<%=pageLink %>" class="w3-bar-item w3-button" target="blank">Make Order</a>
       </div>
       <hr />
 
