@@ -14,7 +14,7 @@ router.get("/", (request, response) => {
     if (error) {
       console.log(error);
     } else {
-      console.log(`Menu Items:  ${menu}`);
+      // console.log(`Menu Items:  ${menu}`);
       response.render("pages/index", {
         pageTitle: "Welcome",
         menuitems: menu,

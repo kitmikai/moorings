@@ -2,14 +2,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Create a Pizza schema for our database
-var PizzaSchema = new Schema({
+var pizzaschema = new Schema({
   id: Number,
+  imagePath: String,
   name: String,
   description: String,
   price: Number,
 });
 
 // convert the Pizza schema into a Model
-let Pizza = mongoose.model("Pizza", PizzaSchema);
+let Pizza = mongoose.model("Pizza", pizzaschema);
 
 module.exports = Pizza;

@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/styles.css" type="text/css" />
   <!-- </head> -->
   <style>
@@ -28,22 +29,22 @@
         class="w3-bar w3-white w3-padding w3-card"
         style="letter-spacing: 4px;"
       >
-        <a href="index.html" class="w3-bar-item w3-button" target="blank"
+        <a href="/" class="w3-bar-item w3-button" target="blank"
           >Moorings</a
         >
         <!-- Right-sided navbar links. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
           <a
-            href="index.html#about"
+            href="/#about"
             class="w3-bar-item w3-button"
             target="blank"
             >About</a
           >
-          <a href="index.html#menu" class="w3-bar-item w3-button" target="blank"
+          <a href="/#menu" class="w3-bar-item w3-button" target="blank"
             >Menu</a
           >
           <a
-            href="index.html#contact"
+            href="/#contact"
             class="w3-bar-item w3-button"
             target="blank"
             >Contact</a
@@ -63,170 +64,27 @@
     </td>
   </tr>
       <div class="w3-container w3-padding-64" id="menu">
-        <h1>Make Order</h1>
+        <h1>Pizza Hub</h1>
+        <p>We make pizza from scratch, with fresh ingredients. This is your personal pizza kitchen where your every pizza whim is our command.
+          The process starts with our freshly-rolled artisan thin dough or our handcrafted pan crust (all made with love).ed pan crust (all made with love).
+          </p>
 
         <form action="/action_page.php" target="_blank">
-          <div class="">
-            <table id="pizza">
-              <tr>
-                <th>Pizza</th>
-                <th>Price</th>
-                <th>Quantity</th>
-              </tr>
-              <tr>
-                <td>Vegetarian Pizza</td>
-                <td>820</td>
-                <td>
-                  <input
-                    type="number"
-                    name="vegPizza"
-                    id="vegPizza"
-                    min="0"
-                    max="30"
-                  />
-                </td>ngolulu</td>
-                <td>940</td>
-                <td>
-                  <input
-                    type="number"
-                    name="chongo"
-                    id="chongo"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Seafood Pizza</td>
-                <td>990</td>
-                <td>
-                  <input
-                    type="number"
-                    name="seafood"
-                    id="seafood"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Pizza Ruspante</td>
-                <td>820</td>
-                <td>
-                  <input
-                    type="number"
-                    name="ruspante"
-                    id="ruspante"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Pizza Marguerita</td>
-                <td>740</td>
-                <td>
-                  <input
-                    type="number"
-                    name="marguerita"
-                    id="marguerita"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Pizza Hawaii</td>
-                <td>820</td>
-                <td>
-                  <input
-                    type="number"
-                    name="hawaii"
-                    id="hawaii"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Salami Pizza</td>
-                <td>940</td>
-                <td>
-                  <input
-                    type="number"
-                    name="salami"
-                    id="salami"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Spicy Oriental Pizza</td>
-                <td>870</td>
-                <td>
-                  <input
-                    type="number"
-                    name="spicy"
-                    id="spicy"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Pizza Chicago</td>
-                <td>820</td>
-                <td>
-                  <input
-                    type="number"
-                    name="Chicago"
-                    id="chicago"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>Pizza Alfredo</td>
-                <td>820</td>
-                <td>
-                  <input
-                    type="number"
-                    name="alfredo"
-                    id="alfredo"
-                    min="0"
-                    max="30"
-                  />
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input
-                    class="w3-button w3-light-grey w3-section"
-                    type="reset"
-                    value="Reset"
-                  />
-                </td>
-                <td>
-                  <input
-                    class="w3-button w3-light-grey w3-section"
-                    onclick="orderPizza()"
-                    value="Total Order"
-                    readonly
-                  />
-                </td>
-                <td>
-                  <input
-                    type="number"
-                    name="total"
-                    id="total"
-                    value=""
-                    readonly
-                  />
-                </td>
-              </tr>
-            </table>
+          <div class="row">
+            <div class="col-sm-6">
+              <% pizzas.forEach(function(pizzas){ %>
+                <div class="card" style="width:30rem;">
+                    <img src="<%= pizzas.imagePath %>" alt="<%= pizzas.name %>" class="card-img-top" width="300" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= pizzas.name %></h5>
+                        <p class="card-text"><%= pizzas.description %></p>
+                        <span class="w3-left w3-tag w3-blue w3-round"><%= pizzas.price %></span>
+                    </div>
+                </div>
+              <%})%>
+
+            </div>
+            
           </div>
         </form>
       </div>
@@ -247,6 +105,6 @@
         >
       </p>
     </footer>
-    <script src="../../static/js/order.js"></script>
+    <script src="/js/order.js"></script>
   </body>
 </html>

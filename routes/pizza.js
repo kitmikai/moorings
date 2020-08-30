@@ -5,17 +5,18 @@ const router = express.Router();
 
 // Catch all routes
 router.get("/", (request, response) => {
-  Pizza.find({}, (error, pizza) => {
+  Pizza.find({}, (error, pizzas) => {
     if (error) {
       console.log(error);
     } else {
-      console.log(`Menu Items:  ${pizza}`);
+      console.log(`Pizza List:  ${pizzas}`);
       response.render("pages/pizzaorder", {
-        pageTitle: "Welcome",
-        pizzaitems: pizza,
+        pageTitle: "Pizza Hub",
+        pizzas: pizzas,
       });
     }
   });
 });
 
 module.exports = router;
+// console.log(`Menu Items:  ${pizzas}`);
